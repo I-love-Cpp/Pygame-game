@@ -1,0 +1,13 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+    ],
+    "extensionsPath": "../../../Maze/maps/extensions",
+    "folders": [
+        "../../../Maze/maps",
+        "../../../Maze/maps",
+        "../../../Maze/maps",
+        "../../../Maze/maps"
+    ],
+    "objectTypesFile": ""
+}

@@ -1,0 +1,55 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "0x72_16x16DungeonTileset.v4.tsx",
+    "expandedProjectPaths": [
+        "D:/Python/Maze/maps"
+    ],
+    "fileStates": {
+        "0x72_16x16DungeonTileset.v4.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2
+        },
+        "D:/Python/Maze/maps/0x72_16x16DungeonTileset.v4.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 5.5
+        },
+        "Dungeon Tileset + Spikes.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 5.5
+        },
+        "map1.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 27.33333333333337,
+                "y": 320
+            }
+        }
+    },
+    "map.height": 10,
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": null,
+    "map.tileHeight": 50,
+    "map.tileWidth": 50,
+    "map.width": 10,
+    "openFiles": [
+        "map1.tmx",
+        "0x72_16x16DungeonTileset.v4.tsx"
+    ],
+    "project": "maps.tiled-project",
+    "recentFiles": [
+        "map1.tmx",
+        "0x72_16x16DungeonTileset.v4.tsx",
+        "Dungeon Tileset + Spikes.tsx",
+        "D:/Python/Maze/maps/0x72_16x16DungeonTileset.v4.tsx",
+        "D:/Python/Maze/maps/map1.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 50,
+        "width": 50
+    }
+}
