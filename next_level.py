@@ -6,10 +6,10 @@ import pygame
 import pygame_gui
 import pyglet
 
-WINDOW_SIZE = (1900, 1000)
+window_size = (640, 480)
 
 pygame.init()
-size = width, height = WINDOW_SIZE[0], WINDOW_SIZE[1]
+size = width, height = window_size[0], window_size[1]
 screen = pygame.display.set_mode(size)
 
 
@@ -93,7 +93,7 @@ def start_screen():
                   "Кничтожте всех монстроов и дойдите до конца уровня",
                   "Для начала нажмите кнопку"]
 
-    fon = pygame.transform.scale(load_image('fon.jpg'), WINDOW_SIZE)
+    fon = pygame.transform.scale(load_image('fon.jpg'), window_size)
     screen.blit(fon, (0, 0))
     font = pygame.font.Font(None, 30)
     text_coord = 50
@@ -575,33 +575,26 @@ start_screen()
 
 
 def main_menu(screen):
-    global WINDOW_SIZE
+    global window_size
     screen.fill((100, 100, 100))
-    manager = pygame_gui.UIManager(WINDOW_SIZE)
+    manager = pygame_gui.UIManager(window_size)
     clock = pygame.time.Clock()
 
     start_game_btn = pygame_gui.elements.UIButton(
         relative_rect=pygame.Rect(
-            (WINDOW_SIZE[0] // 19, WINDOW_SIZE[1] // 3.63),
-            (WINDOW_SIZE[0] // 4.75, WINDOW_SIZE[1] // 10)),
+            (window_size[0] // 19, window_size[1] // 3.63),
+            (window_size[0] // 4.75, window_size[1] // 10)),
         text='Start game',
         manager=manager
     )
     leave_game_btn = pygame_gui.elements.UIButton(
         relative_rect=pygame.Rect(
-            (WINDOW_SIZE[0] // 19, WINDOW_SIZE[1] // 3.63 + 125),
-            (WINDOW_SIZE[0] // 4.75, WINDOW_SIZE[1] // 10)),
+            (window_size[0] // 19, window_size[1] // 3.63 + 125),
+            (window_size[0] // 4.75, window_size[1] // 10)),
         text='Leave game',
         manager=manager
     )
-    window_sizse_btn = pygame_gui.elements.UIButton(
-        relative_rect=pygame.Rect(
-            (WINDOW_SIZE[0] // 19, WINDOW_SIZE[1] // 3.63 + 250),
-            (WINDOW_SIZE[0] // 4.75, WINDOW_SIZE[1] // 10)),
-        text='Set window size',
-        manager=manager
-    )
-    fon = pygame.transform.scale(load_image('menu_fon.jpg'), WINDOW_SIZE)
+    fon = pygame.transform.scale(load_image('menu_fon.jpg'), window_size)
     screen.blit(fon, (0, 0))
     font = pygame.font.Font(None, 30)
     running = True
@@ -617,47 +610,6 @@ def main_menu(screen):
                         break
                     elif event.ui_element == leave_game_btn:
                         exit(0)
-                    elif event.ui_element == window_sizse_btn:
-                        w, h = map(int, input().split())
-                        pygame.display.set_mode((w, h))
-                        screen.fill((100, 100, 100))
-                        WINDOW_SIZE = (w, h)
-                        fon = pygame.transform.scale(load_image('menu_fon.jpg'),
-                                                     WINDOW_SIZE)
-                        screen.blit(fon, (0, 0))
-                        font = pygame.font.Font(None, 30)
-                        start_game_btn.kill()
-                        leave_game_btn.kill()
-                        window_sizse_btn.kill()
-                        start_game_btn = pygame_gui.elements.UIButton(
-                            relative_rect=pygame.Rect(
-                                (WINDOW_SIZE[0] // 19, WINDOW_SIZE[1] // 3.63),
-                                (WINDOW_SIZE[0] // 4.75, WINDOW_SIZE[1] // 10)),
-                            text='Start game',
-                            manager=manager
-                        )
-                        leave_game_btn = pygame_gui.elements.UIButton(
-                            relative_rect=pygame.Rect((WINDOW_SIZE[0] // 19,
-                                                       WINDOW_SIZE[
-                                                           1] // 3.63 + 125), (
-                                                          WINDOW_SIZE[
-                                                              0] // 4.75,
-                                                          WINDOW_SIZE[
-                                                              1] // 10)),
-                            text='Leave game',
-                            manager=manager
-                        )
-                        window_sizse_btn = pygame_gui.elements.UIButton(
-                            relative_rect=pygame.Rect((WINDOW_SIZE[0] // 19,
-                                                       WINDOW_SIZE[
-                                                           1] // 3.63 + 250), (
-                                                          WINDOW_SIZE[
-                                                              0] // 4.75,
-                                                          WINDOW_SIZE[
-                                                              1] // 10)),
-                            text='Set window size',
-                            manager=manager
-                        )
             manager.process_events(event)
         manager.update(time_delta)
         manager.draw_ui(screen)
@@ -849,7 +801,7 @@ while not game_end:
         else:
             intro_text = ["Ничего страшного",
                           "Получится в другой раз"]
-        fon = pygame.transform.scale(load_image('fon.jpg'), WINDOW_SIZE)
+        fon = pygame.transform.scale(load_image('fon.jpg'), window_size)
         screen.blit(fon, (0, 0))
         font = pygame.font.Font(None, 30)
         text_coord = 50
@@ -891,7 +843,7 @@ def finish_screen():
                   "Теперь вы можете поменять карты под себя и пройти их",
                   "До скорых встреч в загадочных подземельях"]
 
-    fon = pygame.transform.scale(load_image('finish.jpg'), WINDOW_SIZE)
+    fon = pygame.transform.scale(load_image('finish.jpg'), window_size)
     screen.blit(fon, (0, 0))
     font = pygame.font.Font(None, 30)
     text_coord = 50
