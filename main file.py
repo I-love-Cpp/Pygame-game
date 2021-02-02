@@ -175,7 +175,6 @@ class Trap(pygame.sprite.Sprite):
         if self.pl_stay and self.texture >= 6 and not self.dm_give:
             player.hp -= self.dmg
             self.dm_give = True
-        print(self.pl_stay)
 
     def player_stay_check(self):
         player_pos_x = player.true_x
@@ -691,7 +690,6 @@ while not game_end:
                 else:
                     h = player.h + abs(player.attack_y)
                     y1 = player.true_y - abs(player.attack_y)
-                print(player.attack_y)
                 for box in boxes_group:
                     x2 = box.true_x
                     y2 = box.true_y
